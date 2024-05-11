@@ -15,6 +15,8 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>17</java.version>
+        <!-- Set Maven version to 3.6.3 -->
+        <maven.compiler.version>3.6.3</maven.compiler.version>
     </properties>
     <dependencies>
         <dependency>
@@ -68,4 +70,3 @@
         </plugins>
     </build>
 </project>
-
