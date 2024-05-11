@@ -2,12 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!-- Set the parent POM to the latest Spring Boot version -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!-- Update Spring Boot version to 3.2.5 -->
-        <version>3.2.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <!-- Update the version to an existing version -->
+        <version>2.6.4</version>
+        <!-- Point relativePath to the correct location of the parent POM -->
+        <relativePath/>
     </parent>
     <groupId>com.simplilearn</groupId>
     <artifactId>ReviewAnalyser</artifactId>
@@ -15,9 +17,7 @@
     <name>ReviewAnalyser</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <!-- Update Java version to 11 -->
         <java.version>11</java.version>
-        <!-- Set Maven version to 3.6.3 -->
         <maven.compiler.version>3.6.3</maven.compiler.version>
     </properties>
     <dependencies>
@@ -25,14 +25,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- Added JUnit dependency -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit-dep</artifactId>
@@ -40,15 +37,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-            <!-- Added Jacoco Maven Plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
